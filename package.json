@@ -1,0 +1,23 @@
+{
+  "name": "ensure-reachable",
+  "version": "0.0.0",
+  "description": "Ensure that URLs are reachable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bguiz/ensure-reachable"
+  },
+  "keywords": [
+    "uptime",
+    "url"
+  ],
+  "author": "bguiz",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bguiz/ensure-reachable/issues"
+  },
+  "homepage": "https://github.com/bguiz/ensure-reachable"
+}
