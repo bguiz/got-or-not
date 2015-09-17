@@ -1,6 +1,6 @@
 {
   "name": "got-or-not",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Ensure that URLs are reachable",
   "main": "index.js",
   "scripts": {
