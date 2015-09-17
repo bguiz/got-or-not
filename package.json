@@ -1,6 +1,6 @@
 {
-  "name": "ensure-reachable",
-  "version": "0.0.1",
+  "name": "got-or-not",
+  "version": "0.1.0",
   "description": "Ensure that URLs are reachable",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bguiz/ensure-reachable"
+    "url": "https://github.com/bguiz/got-or-not"
   },
   "keywords": [
     "uptime",
@@ -17,9 +17,9 @@
   "author": "bguiz",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/bguiz/ensure-reachable/issues"
+    "url": "https://github.com/bguiz/got-or-not/issues"
   },
-  "homepage": "https://github.com/bguiz/ensure-reachable",
+  "homepage": "https://github.com/bguiz/got-or-not",
   "dependencies": {
     "chai": "^3.2.0",
     "mocha": "^2.3.0",
