@@ -6,9 +6,9 @@ var input = require('./input');
 var agent = superagent.agent();
 var expect = chai.expect;
 
-describe('test that URLs are reachable', function() {
+describe('Got URLs or not?', function() {
   input.urls.forEach(function eachUrl(url) {
-    it('Should load '+url, function(done) {
+    it('Got or not? '+url, function(done) {
       agent
         .get(url)
         .end(function(err, res) {

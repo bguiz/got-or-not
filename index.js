@@ -8,13 +8,16 @@ var input = require('./input');
 var testRunner = new mocha();
 var testsDir = __dirname;
 
-fs.readdirSync(testsDir).filter(function filterFiles(fileName) {
-  return fileName.substr(-8) === '.spec.js';
-}).forEach(function addSpecFiles(fileName) {
-  testRunner.addFile(path.join(testsDir, fileName));
-});
+fs
+  .readdirSync(testsDir)
+  .filter(function filterFiles(fileName) {
+    return fileName.substr(-8) === '.spec.js';
+  })
+  .forEach(function addSpecFiles(fileName) {
+    testRunner.addFile(path.join(testsDir, fileName));
+  });
 
-function ensureReachable(urls) {
+function gotOrNot(urls) {
   input.urls = urls;
   testRunner.run(function onFinishedRunningTests(failures) {
     process.on('exit', function onProcessExit() {
@@ -23,4 +26,4 @@ function ensureReachable(urls) {
   });
 }
 
-module.exports = ensureReachable;
+module.exports = gotOrNot;
