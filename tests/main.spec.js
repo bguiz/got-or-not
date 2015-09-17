@@ -1,6 +1,6 @@
-var ensureReachable = require('../index.js');
+var gotOrNot = require('../index.js');
 
-ensureReachable([
+gotOrNot([
   'https://github.com/bguiz',
   'http://bguiz.com/'
 ]);
