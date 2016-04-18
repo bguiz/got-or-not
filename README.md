@@ -12,10 +12,16 @@ npm i --save got-or-not
 
 ```javascript
 var gotOrNot = require('got-or-not');
-gotOrNot([
-  'https://github.com/bguiz',
-  'http://bguiz.com/'
-]);
+gotOrNot({
+  urls: [
+    'https://github.com/bguiz',
+    'http://bguiz.com/'
+  ],
+  files: [
+    './package.json',
+    './foo/bar/baz'
+  ],
+});
 ```
 
 ## Licence
