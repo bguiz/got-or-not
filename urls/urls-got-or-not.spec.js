@@ -1,14 +1,14 @@
 var superagent = require('superagent');
 var chai = require('chai');
 
-var input = require('./input');
+var input = require('../input');
 
 var agent = superagent.agent();
 var expect = chai.expect;
 
-describe('Got URLs or not?', function() {
+describe('[Got URLs or not?]', function() {
   input.urls.forEach(function eachUrl(url) {
-    it('Got or not? '+url, function(done) {
+    it('Got '+url+' or not?', function(done) {
       agent
         .get(url)
         .end(function(err, res) {
