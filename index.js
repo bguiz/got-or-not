@@ -6,19 +6,21 @@ var mocha = require('mocha');
 var input = require('./input');
 
 var testRunner = new mocha();
-var testsDir = __dirname;
 
-fs
-  .readdirSync(testsDir)
-  .filter(function filterFiles(fileName) {
-    return fileName.substr(-8) === '.spec.js';
-  })
-  .forEach(function addSpecFiles(fileName) {
-    testRunner.addFile(path.join(testsDir, fileName));
-  });
+module.exports = gotOrNot;
 
-function gotOrNot(urls) {
-  input.urls = urls;
+function gotOrNot(options) {
+  if (Array.isArray(options.files)) {
+    input.files = options.files;
+    gotOrNotForType(
+      path.resolve(__dirname, './files'));
+  }
+  if (Array.isArray(options.urls)) {
+    input.urls = options.urls;
+    gotOrNotForType(
+      path.resolve(__dirname, './urls'));
+  }
+
   testRunner.run(function onFinishedRunningTests(failures) {
     process.on('exit', function onProcessExit() {
       process.exit(failures);
@@ -26,4 +28,13 @@ function gotOrNot(urls) {
   });
 }
 
-module.exports = gotOrNot;
+function gotOrNotForType(testsDir) {
+  fs
+    .readdirSync(testsDir)
+    .filter(function filterFiles(fileName) {
+      return !!fileName.match(/\.spec\.js$/);
+    })
+    .forEach(function addSpecFiles(fileName) {
+      testRunner.addFile(path.join(testsDir, fileName));
+    });
+}
