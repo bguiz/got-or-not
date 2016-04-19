@@ -1,6 +1,7 @@
 # `got-or-not`
 
-Ensures that some URLs are reachable.
+Ensures that specified URLs are reachable, or
+that specified files exist.
 
 ## Installation
 
@@ -24,6 +25,10 @@ gotOrNot({
 });
 ```
 
+## Author
+
+[Brendan Graetz](http://bguiz.com/)
+
 ## Licence
 
-GPLv3
+GPL-3.0
